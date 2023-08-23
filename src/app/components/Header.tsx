@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Header = () => {
   return (
-    <div className="container p-5">
+    <div className="container p-5 mx-auto">
       <Link href={'/'}>
         <Image src="/CatwikiLogo.svg" alt="logo" width={127.71} height={42.9} />
       </Link>

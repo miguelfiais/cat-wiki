@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className="container px-5 mt-5">
+    <footer className="container px-5 mt-5 mx-auto">
       <div className="bg-black p-5 rounded-3xl rounded-b-none">
         <Image
           src={'/CatwikiLogoFooter.svg'}
@@ -21,7 +21,7 @@ const Footer = () => {
             >
               Miguel Fiais{' '}
             </a>
-            - devChallenge.io 2021
+            - devChallenge.io 2023
           </p>
         </div>
       </div>
