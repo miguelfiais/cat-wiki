@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import SkillCat from './components/SkillCat'
 
 const fetchImagesBreed = async (breed: string) => {
@@ -20,6 +21,18 @@ const fetchAboutBreed = async (breed: string) => {
 const Cat = async ({ params }: { params: { catId: string } }) => {
   const imagesBreed = await fetchImagesBreed(params.catId)
   const aboutBreed = await fetchAboutBreed(params.catId)
+
+  if (!imagesBreed || !aboutBreed)
+    return (
+      <div className="container mx-auto p-5 min-h-[calc(100vh-224.48px)] flex items-center justify-center flex-col">
+        <p className="font-bold text-2xl text-amber-950">
+          404 | Breed Not Found
+        </p>
+        <Link href={'/'} className="font-medium underline">
+          Back
+        </Link>
+      </div>
+    )
 
   return (
     <div className="container p-5 min-h-[calc(100vh-224.48px)] mx-auto">
