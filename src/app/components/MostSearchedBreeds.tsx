@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import BreedCard from './BreedCard'
 
@@ -20,9 +21,12 @@ const MostSearchedBreeds = async () => {
         <h2 className="mt-4 text-lg font-bold max-w-[185px] text-amber-950">
           66+ Breeds For you to discover
         </h2>
-        <a href="" className="text-xs font-semibold flex items-center gap-1">
+        <Link
+          href="/cats"
+          className="text-xs font-semibold flex items-center gap-1"
+        >
           SEE MORE <HiArrowNarrowRight color="#451A03" size={16} />
-        </a>
+        </Link>
       </div>
       <div className="grid grid-cols-2 items-center mt-5 gap-3">
         {cats.map((cat: any) => (
