@@ -2,13 +2,18 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-const InputSearch = ({ breeds }: { breeds: any }) => {
+interface IBreed {
+  id: string
+  name: string
+}
+
+const InputSearch = ({ breeds }: { breeds: IBreed[] }) => {
   const [search, setSearch] = useState('')
-  const [filterBreeds, setFilterBreeds] = useState([])
+  const [filterBreeds, setFilterBreeds] = useState<IBreed[]>([])
 
   useEffect(() => {
     const findBreed = () => {
-      const searchBreeds = breeds.filter((breed: any) =>
+      const searchBreeds = breeds.filter((breed) =>
         breed.name.toLowerCase().includes(search.toLowerCase())
       )
       setFilterBreeds(searchBreeds)
@@ -29,7 +34,7 @@ const InputSearch = ({ breeds }: { breeds: any }) => {
       />
       {search && filterBreeds && (
         <div className="w-full max-w-[224px] max-h-52 bg-white absolute rounded-xl z-10 mt-2 shadow-md overflow-y-auto">
-          {filterBreeds.map((breed: any) => (
+          {filterBreeds.map((breed) => (
             <Link href={`cat/${breed.id}`} key={breed.id}>
               <p className="w-full p-2 hover:bg-gray-200 text-xs font-medium">
                 {breed.name}

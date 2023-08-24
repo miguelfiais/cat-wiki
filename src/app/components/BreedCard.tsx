@@ -1,15 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+interface IBreed {
+  id: string
+  name: string
+}
+
+interface IBreedImage {
+  url: string
+}
+
 const fetchBreed = async (breedId: string) => {
   const response = await fetch(
     `https://api.thecatapi.com/v1/images/search?&breed_ids=${breedId}&api_key=${process.env.API_KEY}`
   )
-  const json = await response.json()
+  const json = (await response.json()) as IBreedImage[]
   return json
 }
 
-const BreedCard = async ({ breed }: { breed: any }) => {
+const BreedCard = async ({ breed }: { breed: IBreed }) => {
   const cat = await fetchBreed(breed.id)
   if (!cat) return null
   return (
@@ -19,7 +28,7 @@ const BreedCard = async ({ breed }: { breed: any }) => {
     >
       <div className="relative w-full h-[150px]">
         <Image
-          src={cat[0]?.url}
+          src={cat?.[0]?.url}
           alt={breed.name}
           fill
           style={{ objectFit: 'cover' }}

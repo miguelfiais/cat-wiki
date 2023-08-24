@@ -1,8 +1,13 @@
 import InputSearch from './InputSearch'
 
+interface IBreed {
+  id: string
+  name: string
+}
+
 const fetchBreeds = async () => {
   const response = await fetch('https://api.thecatapi.com/v1/breeds')
-  const json = response.json()
+  const json = (await response.json()) as IBreed[]
   return json
 }
 

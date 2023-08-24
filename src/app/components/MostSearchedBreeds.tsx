@@ -2,11 +2,16 @@ import Link from 'next/link'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import BreedCard from './BreedCard'
 
+interface IBreed {
+  id: string
+  name: string
+}
+
 const fetchBreeds = async () => {
   const response = await fetch(
     'https://api.thecatapi.com/v1/breeds?limit=4&page=0'
   )
-  const json = await response.json()
+  const json = (await response.json()) as IBreed[]
   return json
 }
 
@@ -29,7 +34,7 @@ const MostSearchedBreeds = async () => {
         </Link>
       </div>
       <div className="grid grid-cols-2 items-center mt-5 gap-3">
-        {cats.map((cat: any) => (
+        {cats.map((cat) => (
           <BreedCard key={cat.id} breed={cat} />
         ))}
       </div>
