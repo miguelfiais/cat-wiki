@@ -16,8 +16,8 @@ const BreedCard = async ({ breed, index }: { breed: any; index: number }) => {
     <div key={breed.id} className="flex flex-col">
       <Link href={`/cat/${breed.id}`} className="relative h-[150px] w-[150px]">
         <Image
-          src={imageBreed[0]?.url}
-          alt={breed.name}
+          src={imageBreed[0]?.url!}
+          alt={breed.name!}
           fill
           objectFit="cover"
           className="rounded-xl shadow-md hover:-translate-y-2 transition-all cursor-pointer"

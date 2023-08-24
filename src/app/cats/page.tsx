@@ -8,6 +8,7 @@ const fetchBreeds = async () => {
 
 const Cats = async () => {
   const breeds = await fetchBreeds()
+  if (!breeds) return null
   return (
     <div className="container mx-auto p-5">
       <h1 className="text-amber-950 text-3xl font-bold">
