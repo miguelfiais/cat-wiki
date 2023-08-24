@@ -4,7 +4,7 @@ import WhyShould from './components/WhyShould'
 
 export default function Home() {
   return (
-    <main className="container p-5">
+    <main className="container mx-auto p-5">
       <SearchCat />
       <MostSearchedBreeds />
       <WhyShould />

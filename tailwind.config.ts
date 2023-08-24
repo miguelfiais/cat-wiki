@@ -12,6 +12,7 @@ const config: Config = {
         'hero-image-lg': "url('/HeroImagelg.png')",
         'hero-image-md': "url('/HeroImagemd.png')",
         'hero-image-sm': "url('/HeroImagesm.png')",
+        'search-image': "url('/icon-search.svg')",
       },
     },
   },
