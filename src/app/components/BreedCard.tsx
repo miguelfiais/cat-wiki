@@ -26,7 +26,7 @@ const BreedCard = async ({ breed }: { breed: IBreed }) => {
       href={`/cat/${breed.id}`}
       className="w-full hover:-translate-y-2 transition-all"
     >
-      <div className="relative w-full h-[150px]">
+      <div className="relative w-full h-[150px] lg:h-[200px]">
         <Image
           src={cat?.[0]?.url}
           alt={breed.name}
@@ -36,7 +36,9 @@ const BreedCard = async ({ breed }: { breed: IBreed }) => {
         />
       </div>
 
-      <p className="text-xs text-amber-950 font-semibold mt-2">{breed.name}</p>
+      <p className="text-xs text-amber-950 font-semibold mt-2 md:text-sm lg:text-base">
+        {breed.name}
+      </p>
     </Link>
   )
 }

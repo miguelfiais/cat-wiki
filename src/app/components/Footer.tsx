@@ -11,8 +11,8 @@ const Footer = () => {
           height={33.59}
         />
         <div className="text-white flex items-center mt-5 gap-1">
-          <span className="text-lg">© </span>
-          <p className="text-xs ">
+          <span className="text-lg md:text-xl lg:text-2xl">© </span>
+          <p className="text-xs md:text-sm lg:text-base">
             created by{' '}
             <a
               href="https://github.com/miguelfiais"
