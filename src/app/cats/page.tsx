@@ -17,7 +17,7 @@ const Cats = async () => {
 
   return (
     <div className="container mx-auto p-5">
-      <h1 className="text-amber-950 text-3xl font-bold">
+      <h1 className="text-amber-950 text-3xl lg:text-4xl font-bold">
         Breeds For you to discover
       </h1>
       <div className="flex flex-col gap-9 mt-9">
