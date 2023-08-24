@@ -15,7 +15,7 @@ const fetchAboutBreed = async (breed: string) => {
     `https://api.thecatapi.com/v1/images/search?&breed_ids=${breed}&api_key=${process.env.API_KEY}`
   )
   const json = await response.json()
-  return json[0]
+  return json
 }
 
 const Cat = async ({ params }: { params: { catId: string } }) => {
@@ -38,63 +38,63 @@ const Cat = async ({ params }: { params: { catId: string } }) => {
     <div className="container p-5 min-h-[calc(100vh-224.48px)] mx-auto">
       <div className="md:flex items-start gap-10 lg:gap-14">
         <Image
-          src={aboutBreed.url}
-          alt={aboutBreed.breeds[0].name}
+          src={aboutBreed[0]?.url}
+          alt={aboutBreed[0]?.breeds[0]?.name}
           width={250}
           height={250}
           className="rounded-lg mb-5 lg:w-80"
         />
         <div>
           <h2 className="text-3xl font-bold text-amber-950 md:text-4xl">
-            {aboutBreed.breeds[0].name}
+            {aboutBreed[0]?.breeds[0]?.name}
           </h2>
           <p className="mt-5 text-xs font-medium md:text-base lg:text-lg">
-            {aboutBreed.breeds[0].description}
+            {aboutBreed[0]?.breeds[0]?.description}
           </p>
           <div className="flex flex-col gap-4 mt-5 text-xs md:text-base">
             <p>
               <span className="font-bold">Temperament: </span>
-              {aboutBreed.breeds[0].temperament}
+              {aboutBreed[0]?.breeds[0]?.temperament}
             </p>
             <p>
               <span className="font-bold">Origin: </span>
-              {aboutBreed.breeds[0].origin}
+              {aboutBreed[0]?.breeds[0].origin}
             </p>
             <p>
               <span className="font-bold">Life Span: </span>
-              {aboutBreed.breeds[0].life_span} years
+              {aboutBreed[0]?.breeds[0]?.life_span} years
             </p>
             <SkillCat
               nameSkill="Adaptability"
-              quantity={aboutBreed.breeds[0].adaptability}
+              quantity={aboutBreed[0]?.breeds[0]?.adaptability}
             />
             <SkillCat
               nameSkill="Affection level"
-              quantity={aboutBreed.breeds[0].affection_level}
+              quantity={aboutBreed[0]?.breeds[0]?.affection_level}
             />
             <SkillCat
               nameSkill="Child Friendly"
-              quantity={aboutBreed.breeds[0].child_friendly}
+              quantity={aboutBreed[0]?.breeds[0]?.child_friendly}
             />
             <SkillCat
               nameSkill="Grooming"
-              quantity={aboutBreed.breeds[0].grooming}
+              quantity={aboutBreed[0]?.breeds[0]?.grooming}
             />
             <SkillCat
               nameSkill="Intelligence"
-              quantity={aboutBreed.breeds[0].intelligence}
+              quantity={aboutBreed[0]?.breeds[0]?.intelligence}
             />
             <SkillCat
               nameSkill="Health issues"
-              quantity={aboutBreed.breeds[0].health_issues}
+              quantity={aboutBreed[0]?.breeds[0]?.health_issues}
             />
             <SkillCat
               nameSkill="Social needs"
-              quantity={aboutBreed.breeds[0].social_needs}
+              quantity={aboutBreed[0]?.breeds[0]?.social_needs}
             />
             <SkillCat
               nameSkill="Stranger friendly"
-              quantity={aboutBreed.breeds[0].stranger_friendly}
+              quantity={aboutBreed[0]?.breeds[0]?.stranger_friendly}
             />
           </div>
         </div>

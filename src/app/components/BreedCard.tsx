@@ -6,7 +6,7 @@ const fetchBreed = async (breedId: string) => {
     `https://api.thecatapi.com/v1/images/search?&breed_ids=${breedId}&api_key=${process.env.API_KEY}`
   )
   const json = await response.json()
-  return json[0]
+  return json
 }
 
 const BreedCard = async ({ breed }: { breed: any }) => {
@@ -19,7 +19,7 @@ const BreedCard = async ({ breed }: { breed: any }) => {
     >
       <div className="relative w-full h-[150px]">
         <Image
-          src={cat.url}
+          src={cat[0]?.url}
           alt={breed.name}
           fill
           style={{ objectFit: 'cover' }}
