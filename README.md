@@ -79,6 +79,6 @@ $ npm run dev
 
 ## Contact
 
-- Website [your-website.com](https://miguelfiais.netlify.app/)
-- GitHub [@your-username](https://github.com/miguelfiais)
-- Linkedin [@your-linkedin](https://www.linkedin.com/in/miguel-fiais/)
+- Website [Portfolio](https://miguelfiais.netlify.app/)
+- GitHub [miguelfiais](https://github.com/miguelfiais)
+- Linkedin [miguelfiais](https://www.linkedin.com/in/miguel-fiais/)
