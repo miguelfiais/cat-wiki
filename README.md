@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- Please update value in the {}  -->
 
-## Getting Started
+<h1 align="center">CatWiki</h1>
 
-First, run the development server:
+<div align="center">
+   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
+
+<div align="center">
+  <h3>
+    <a href="https://cat-wiki-liart.vercel.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://github.com/miguelfiais/cat-wiki">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/f4NJ53rcfgrP6sBMD2jt">
+      Challenge
+    </a>
+  </h3>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+<!-- OVERVIEW -->
+
+## Overview
+
+![homepage](https://github.com/miguelfiais/cat-wiki/assets/108070001/6d6d9bfc-7e39-471b-9534-96b5739ecd5c)
+![catIdpage](https://github.com/miguelfiais/cat-wiki/assets/108070001/c51c1fee-fc4e-4978-8ffe-096e8b2c06ea)
+![catspage](https://github.com/miguelfiais/cat-wiki/assets/108070001/6aa7d3af-4578-47bb-a87a-dce9569825be)
+
+The main purpose of the Cat-Wiki is to provide detailed information about different cat breeds.
+
+Cat-Wiki was built using the Next.js framework due to its server-side rendering (SSR) and client-side rendering (CSR) advantages, which ensure fast load times and a smooth user experience.
+
+### Built With
+
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com/)
+
+## Features
+
+<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/f4NJ53rcfgrP6sBMD2jt) was to build an application to complete the given user stories.
+
+## How To Use
+
+<!-- Example: -->
+
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+# Clone this repository
+$ git clone https://github.com/miguelfiais/cat-wiki
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Website [your-website.com](https://miguelfiais.netlify.app/)
+- GitHub [@your-username](https://github.com/miguelfiais)
+- Linkedin [@your-linkedin](https://www.linkedin.com/in/miguel-fiais/)
