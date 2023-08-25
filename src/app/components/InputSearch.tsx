@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 interface IBreed {
   id: string
@@ -9,17 +9,13 @@ interface IBreed {
 
 const InputSearch = ({ breeds }: { breeds: IBreed[] }) => {
   const [search, setSearch] = useState('')
-  const [filterBreeds, setFilterBreeds] = useState<IBreed[]>([])
 
-  useEffect(() => {
-    const findBreed = () => {
-      const searchBreeds = breeds.filter((breed) =>
-        breed.name.toLowerCase().includes(search.toLowerCase())
-      )
-      setFilterBreeds(searchBreeds)
-    }
-    search && findBreed()
-  }, [breeds, search])
+  const filteredBreeds =
+    search.length > 0
+      ? breeds.filter((breed) =>
+          breed.name.toLowerCase().includes(search.toLowerCase())
+        )
+      : []
 
   return (
     <div>
@@ -32,9 +28,9 @@ const InputSearch = ({ breeds }: { breeds: IBreed[] }) => {
         }}
         value={search}
       />
-      {search && filterBreeds && (
+      {search && filteredBreeds && (
         <div className="w-full max-w-[224px] max-h-52 bg-white absolute rounded-xl z-10 mt-2 shadow-md overflow-y-auto  md:max-w-[280px] ">
-          {filterBreeds.map((breed) => (
+          {filteredBreeds.map((breed) => (
             <Link href={`cat/${breed.id}`} key={breed.id}>
               <p className="w-full p-2 hover:bg-gray-200 text-xs sm:text-sm md:text-base font-medium">
                 {breed.name}
